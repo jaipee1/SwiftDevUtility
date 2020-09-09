@@ -10,6 +10,8 @@
 		04AC60F92509239F0094CC26 /* SwiftDevUtility.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04AC60EF2509239F0094CC26 /* SwiftDevUtility.framework */; };
 		04AC60FE2509239F0094CC26 /* SwiftDevUtilityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AC60FD2509239F0094CC26 /* SwiftDevUtilityTests.swift */; };
 		04AC61002509239F0094CC26 /* SwiftDevUtility.h in Headers */ = {isa = PBXBuildFile; fileRef = 04AC60F22509239F0094CC26 /* SwiftDevUtility.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		04AC610D2509304E0094CC26 /* String+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AC610C2509304E0094CC26 /* String+extension.swift */; };
+		04AC610F250931720094CC26 /* String+extensioTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AC610E250931720094CC26 /* String+extensioTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +31,8 @@
 		04AC60F82509239F0094CC26 /* SwiftDevUtilityTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftDevUtilityTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		04AC60FD2509239F0094CC26 /* SwiftDevUtilityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDevUtilityTests.swift; sourceTree = "<group>"; };
 		04AC60FF2509239F0094CC26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04AC610C2509304E0094CC26 /* String+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+extension.swift"; sourceTree = "<group>"; };
+		04AC610E250931720094CC26 /* String+extensioTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+extensioTest.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +75,7 @@
 		04AC60F12509239F0094CC26 /* SwiftDevUtility */ = {
 			isa = PBXGroup;
 			children = (
+				04AC610A2509300B0094CC26 /* Foundation */,
 				04AC60F22509239F0094CC26 /* SwiftDevUtility.h */,
 				04AC60F32509239F0094CC26 /* Info.plist */,
 			);
@@ -81,9 +86,26 @@
 			isa = PBXGroup;
 			children = (
 				04AC60FD2509239F0094CC26 /* SwiftDevUtilityTests.swift */,
+				04AC610E250931720094CC26 /* String+extensioTest.swift */,
 				04AC60FF2509239F0094CC26 /* Info.plist */,
 			);
 			path = SwiftDevUtilityTests;
+			sourceTree = "<group>";
+		};
+		04AC610A2509300B0094CC26 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				04AC610B2509302C0094CC26 /* String */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		04AC610B2509302C0094CC26 /* String */ = {
+			isa = PBXGroup;
+			children = (
+				04AC610C2509304E0094CC26 /* String+extension.swift */,
+			);
+			path = String;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +170,7 @@
 				TargetAttributes = {
 					04AC60EE2509239F0094CC26 = {
 						CreatedOnToolsVersion = 11.4.1;
+						LastSwiftMigration = 1140;
 					};
 					04AC60F72509239F0094CC26 = {
 						CreatedOnToolsVersion = 11.4.1;
@@ -195,6 +218,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04AC610D2509304E0094CC26 /* String+extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,6 +226,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04AC610F250931720094CC26 /* String+extensioTest.swift in Sources */,
 				04AC60FE2509239F0094CC26 /* SwiftDevUtilityTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -340,6 +365,7 @@
 		04AC61042509239F0094CC26 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = D3ZBFG93RH;
@@ -357,6 +383,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Apple.SwiftDevUtility;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -365,6 +392,7 @@
 		04AC61052509239F0094CC26 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = D3ZBFG93RH;
@@ -390,6 +418,7 @@
 		04AC61072509239F0094CC26 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D3ZBFG93RH;
 				INFOPLIST_FILE = SwiftDevUtilityTests/Info.plist;
@@ -408,6 +437,7 @@
 		04AC61082509239F0094CC26 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D3ZBFG93RH;
 				INFOPLIST_FILE = SwiftDevUtilityTests/Info.plist;
